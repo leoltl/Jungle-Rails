@@ -3,7 +3,6 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @enhanced_order = enhanced_order
-    
   end
 
   def create
