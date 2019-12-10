@@ -3,6 +3,8 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
+  
+  <% if enhanced_cart.length != 0 then %>
 
   <div class="panel panel-default items">
     <table class="table table-bordered">
@@ -34,7 +36,6 @@
 
   <div class="row">
     <div class="col-xs-12">
-    <% if enhanced_cart.length != 0 then %>
       <%= form_tag orders_path do %>
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -47,12 +48,13 @@
           data-currency="cad">
         </script>
       <% end %>
-    <% else %>
+    </div>
+  </div>
+
+  <% else %>
         <h4> You currently have no products in your cart.
         <%= link_to 'Start shopping.', controller: 'products' %>
         </h4>
     <% end %> 
-    </div>
-  </div>
 
 </section>
