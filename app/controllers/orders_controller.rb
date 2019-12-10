@@ -2,6 +2,8 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
+    @enhanced_order = enhanced_order
+    
   end
 
   def create
@@ -20,6 +22,10 @@ class OrdersController < ApplicationController
   end
 
   private
+
+  def enhanced_order
+    LineItem.where(order_id: params[:id]).map {|lineItem| { product:Product.find(lineItem.product_id), lineItem: lineItem } }
+  end
 
   def empty_cart!
     # empty hash means no products in cart :)
