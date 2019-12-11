@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
   private
 
   def enhanced_order
-    LineItem.where(order_id: params[:id]).map {|lineItem| { product:Product.find(lineItem.product_id), lineItem: lineItem } }
+    LineItem.where(order_id: params[:id]).map {|lineItem| { product: Product.find(lineItem.product_id), lineItem: lineItem } }
   end
 
   def empty_cart!
