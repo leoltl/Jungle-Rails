@@ -1,0 +1,14 @@
+<tr>
+  <td>
+    <%= category.id %>
+  </td>
+  <td>
+    <%= category.name %>
+  </td>
+  <td>
+    <%= category.created_at.strftime('%a %d %b %Y')  %>
+  </td>
+  <td>
+    <%= link_to fa_icon('trash'), [:root], class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+  </td>
+</tr>
