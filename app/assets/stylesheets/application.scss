@@ -1,10 +1,10 @@
 // Vendor
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import "font-awesome";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'font-awesome';
 
 // App
-@import "products";
+@import 'products';
 
 // Global
 body {
@@ -14,4 +14,16 @@ body {
 // Bootstrap adjustments
 form.button_to {
   display: inline;
+}
+
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 300px;
+
+  input[type='submit'] {
+    margin: 2em;
+  }
 }
