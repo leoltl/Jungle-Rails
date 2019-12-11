@@ -58,19 +58,22 @@ main section.categories-show {
         }
       }
     }
-    .sold-out::before {
-      content: 'SOLD OUT!';
-      font-weight: bold;
-      position: absolute;
-      color: white;
-      top: 0;
-      left: 0;
-      padding: 10px;
-      background-color: red;
-      opacity: 0.6;
-      border-top-left-radius: 4px;
-      border-bottom-right-radius: 20px;
-      font-size: 0.8em;
+
+    .sold-out {
+      &::before {
+        content: 'SOLD OUT!';
+        font-weight: bold;
+        position: absolute;
+        color: white;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        background-color: red;
+        opacity: 0.6;
+        border-top-left-radius: 4px;
+        border-bottom-right-radius: 20px;
+        font-size: 0.8em;
+      }
     }
   }
 }
